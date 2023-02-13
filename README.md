@@ -12,4 +12,4 @@ Later there will be separate pages to reference but for now they will stay here.
 ## Getting a logged in user. 
 If you want to find out what user is logged in to your [Blazor](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor) application add this code into a blazor component.
 
-{% gist 780d482531f697198de261e35723c236 %}
+<script src="https://gist.github.com/rileyseaburg-efc/780d482531f697198de261e35723c236.js"></script>
