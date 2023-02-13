@@ -12,4 +12,17 @@ Later there will be separate pages to reference but for now they will stay here.
 ## Getting a logged in user. 
 If you want to find out what user is logged in to your [Blazor](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor) application add this code into a blazor component.
 
-<script src="https://gist.github.com/rileyseaburg-efc/780d482531f697198de261e35723c236.js"></script>
+```CS
+
+// Set parameter
+    [CascadingParameter]
+    private Task<AuthenticationState> authenticationStateTask { get; set; }
+    
+// Get the current logged in user
+/// This is the most important line
+var currentUser = (authenticationStateTask.Result).User;
+var userName = currentUser.Identity.Name;
+
+// Trim off NYSEFC\\
+userName = userName.Substring(7);
+```
